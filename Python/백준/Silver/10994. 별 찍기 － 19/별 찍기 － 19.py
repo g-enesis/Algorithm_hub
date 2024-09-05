@@ -1,3 +1,11 @@
+"""
+# 2024.09.05 (목)
+# 3번 문제
+# https://www.acmicpc.net/problem/10994
+"""
+
+# 1
+# *
 def draw_star(num):
     # 전체 패턴의 크기는 (4 * num - 3) x (4 * num - 3)
     size = 4 * num - 3
