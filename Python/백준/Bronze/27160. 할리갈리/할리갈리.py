@@ -1,41 +1,32 @@
 
+# 카드의 개수 입력받는다.
 N = int(input())
 
-# 과일 딕셔너리 선언
-dict = {
-    "STRAWBERRY": 0, 
-    "BANANA": 0, 
-    "LIME": 0, 
-    "PLUM": 0
+# 카드 과일종류와 과일개수를 담을 딕셔너리 선언
+fruits = {
+    "STRAWBERRY": 0,
+    "BANANA": 0,
+    "LIME": 0,
+    "PLUM": 0,
 }
 
-# 상태값 선언
-status = "NO"
+# 결과값 변수
+result = "NO"
 
+# 카드개수만큼 반복한다.
 for i in range(N):
-    # 문자열 입력받기
-    F, C = input().split()
-    # 과일을 문자열, 개수는 정수로 변환
-    fruit, count = str(F), int(C)
+    # 카드 1장을 뒤집어본다.
+    a, b  = input().split()
+    # 과일종류와 과일개수를 타입에 맞게 변수에 저장한다.
+    type, amount = a, int(b)
 
-    # 선언한 딕셔너리에 각 과일의 갯수를 추가한다.
-    dict[fruit] += count
-    
-    if dict["BANANA"] == 5:
-        status = "YES"
+    # 딕셔너리에 정의된 과일에 과일개수를 추가해준다.
+    fruits[type] += amount
 
-    elif dict["LIME"] == 5:
-        status = "YES"
+# 딕셔너리 과일중에서 과일의 개수가 정확히 5개가 있다면
+if any(value == 5 for value in fruits.values()):
+    result = "YES"
+else:
+    result = "NO"
 
-    elif dict["PLUM"] == 5:
-        status = "YES"
-
-    elif dict["STRAWBERRY"] == 5:
-        status = "YES"
-
-    else:
-        status = "NO"
-    
-
-print(status)
-            
+print(result)
