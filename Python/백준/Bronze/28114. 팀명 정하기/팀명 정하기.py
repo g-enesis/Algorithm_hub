@@ -27,51 +27,6 @@
   두 번째 방법으로 만들어지는 팀명을 차례대로 출력하는 프로그램을 작성하라.
   """
 
-# print(2018%100)
-# print(2019%100)
-# print(2020%100)
-
-# print("AHN"[0])
-# print("LEE"[0])
-# print("OH"[0])
-
-# 1.세 참가자의 입학 연도를 100으로 나눈 나머지를 오름차순으로 정렬해서 이어 붙인 문자열
-# def solution_1(dict=dict):
-#     array = []
-#     for key, value in dict.items():
-#         year = int(value[1]) % 100
-#         array.append(year)
-
-#     for i in range(len(array)):
-#         min_index = i # 가장 작은 원소의 인덱스
-#         for j in range(i + 1, len(array)):
-#             if array[min_index] > array[j]:
-#                 min_index = j
-#         array[i], array[min_index] = array[min_index], array[i] # 스와프
-
-#     print(array)
-#     return array
-
-# # 2.세 참가자 중 성씨를 영문으로 표기했을 때의 
-# # 첫 글자를 백준 온라인 저지에서 해결한 문제가 많은 사람부터 차례대로 나열한 문자열
-# def solution_2(dict=dict):
-#     print("dict2: ", dict)
-#     result = []
-#     for key, value in dict.items():
-#         solved, name = int(value[0]), str(value[2])
-#         print("solved: ", solved)
-#         print("name: ", name)
-
-# dict = {}
-
-# # 출력
-# for i in range(3):
-#     # 입력받기
-#     input_data = input().split()
-#     dict[i] = input_data
-
-# solution_1(dict)
-# solution_2(dict)
 sol1 = []
 rank_dict = {}
 
